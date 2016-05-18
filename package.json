@@ -1,0 +1,25 @@
+{
+  "name": "gulp-project",
+  "version": "0.1.0",
+  "devDependencies": {
+    "browser-sync": "*",
+    "gulp": "*",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-concat-css": "*",
+    "gulp-connect": "*",
+    "gulp-css-globbing": "*",
+    "gulp-imagemin": "*",
+    "gulp-minify-css": "*",
+    "gulp-notify": "*",
+    "gulp-rename": "*",
+    "gulp-sass": "*",
+    "gulp-sass-bulk-import": "*",
+    "gulp-sass-glob-import": "*",
+    "gulp-uncss": "*",
+    "gulp-watch": "*",
+    "imagemin-pngquant": "*",
+    "main-bower-files": "*",
+    "node-bourbon": "*",
+    "rimraf": "*"
+  }
+}
