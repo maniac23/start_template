@@ -145,7 +145,6 @@ gulp.task('build', [
     'style:build',
     'fonts:build',
     'image:build',
-    'php:build'
 ]);
 
 // watch task
@@ -161,11 +160,6 @@ gulp.task('watch', function(){
     watch([path.watch.js], function(event, cb) {
         setTimeout(function(){
             gulp.start('js:build');
-        }, 300);
-    });
-    watch([path.watch.php], function(event, cb) {
-        setTimeout(function(){
-            gulp.start('php:build');
         }, 300);
     });
     watch([path.watch.img], function(event, cb) {
