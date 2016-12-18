@@ -1,24 +1,28 @@
 {
-  "name": "gulp-project",
-  "version": "0.1.0",
+  "name": "maniac23_start_template",
+  "version": "2.0",
+  "description": "boilerplate for html+js+css apps",
+  "repository": {
+    "type": "git",
+    "url": " "
+  },
+  "dependencies": {
+    "browser-sync": "*",
+    "gulp": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-imagemin": "*",
+    "gulp-minify-css": "*",
+    "gulp-rigger": "*",
+    "gulp-sass": "*",
+    "gulp-sourcemaps": "*",
+    "gulp-uglify": "*",
+    "gulp-watch": "*",
+    "imagemin-pngquant": "*",
+    "rimraf": "*"
+  },
   "devDependencies": {
-    "browser-sync": "^2.13.0",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.0",
-    "gulp-concat-css": "^2.3.0",
-    "gulp-connect": "^4.2.0",
-    "gulp-css-globbing": "^0.1.8",
-    "gulp-imagemin": "^3.0.1",
-    "gulp-minify-css": "^1.2.4",
-    "gulp-notify": "*",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.3.2",
-    "gulp-sass-bulk-import": "^1.0.1",
-    "gulp-sass-glob-import": "^0.1.0",
-    "gulp-uncss": "^1.0.5",
-    "gulp-watch": "^4.3.8",
-    "gulp.spritesmith": "^6.2.1",
-    "imagemin-pngquant": "^5.0.0",
-    "main-bower-files": "^2.13.1"
+    "gulp-svgmin": "^1.2.2",
+    "gulp-svgstore": "^6.0.0",
+    "path": "^0.12.7"
   }
 }
