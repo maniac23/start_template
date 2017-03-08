@@ -1,6 +1,6 @@
 {
   "name": "maniac23_start_template",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "boilerplate for html+js+css apps",
   "repository": {
     "type": "git",
@@ -9,20 +9,22 @@
   "dependencies": {
     "browser-sync": "*",
     "gulp": "*",
-    "gulp-autoprefixer": "*",
+    "gulp-postcss": "*",
+    "postcss-cssnext": "*",
+    "cssnano": "*",
     "gulp-imagemin": "*",
-    "gulp-minify-css": "*",
     "gulp-rigger": "*",
-    "gulp-sass": "*",
-    "gulp-sourcemaps": "*",
     "gulp-uglify": "*",
     "gulp-watch": "*",
     "imagemin-pngquant": "*",
     "rimraf": "*"
   },
   "devDependencies": {
-    "gulp-svgmin": "^1.2.2",
-    "gulp-svgstore": "^6.0.0",
-    "path": "^0.12.7"
+    "gulp-postcss": "^6.3.0",
+    "gulp-svgmin": "*",
+    "gulp-svgstore": "*",
+    "path": "*",
+    "postcss-easy-import": "^2.0.0",
+    "precss": "^1.4.0"
   }
 }

@@ -1,21 +1,26 @@
 'use strict';
 
 var gulp = require('gulp'),
+    postcss = require('gulp-postcss'),
     watch = require('gulp-watch'),
-    prefixer = require('gulp-autoprefixer'),
     uglify = require('gulp-uglify'),
-    sass = require('gulp-sass'),
-    sourcemaps = require('gulp-sourcemaps'),
     rigger = require('gulp-rigger'),
-    cssmin = require('gulp-minify-css'),
     imagemin = require('gulp-imagemin'),
     pngquant = require('imagemin-pngquant'),
     rimraf = require('rimraf'),
     browserSync = require("browser-sync"),
+    reload = browserSync.reload,
     svgstore = require('gulp-svgstore'),
     svgmin = require('gulp-svgmin'),
-    gulpPath = require('path'),
-    reload = browserSync.reload;
+    gulpPath = require('path');
+
+
+// array of postcss plugins
+var plugins = [
+  require('postcss-easy-import'),
+  require('postcss-cssnext')(),
+  require ('cssnano')()
+];
 
 // define source & build paths
 var path = {
@@ -29,7 +34,7 @@ var path = {
     src: {
         html: 'src/*.html',
         js: 'src/js/main.js',
-        style: 'src/style/main.scss',
+        style: 'src/style/main.css',
         img: 'src/img/*.*',
         fonts: 'src/fonts/**/*.*',
         svg: 'src/img/svg_sprite/*.*',
@@ -37,7 +42,7 @@ var path = {
     watch: {
         html: 'src/**/*.html',
         js: 'src/js/**/*.js',
-        style: 'src/style/**/*.scss',
+        style: 'src/style/**/*.css',
         img: 'src/img/*.*',
         fonts: 'src/fonts/**/*.*'
     },
@@ -81,23 +86,31 @@ gulp.task('js:build', function () {
         .pipe(reload({stream: true}));
 });
 
-// sass build task
-gulp.task('style:build', function () {
-    gulp.src(path.src.style)
-        .pipe(sass({
-            includePaths: ['src/style/'],
-            outputStyle: 'compressed',
-            sourceMap: true,
-            errLogToConsole: true
-        }))
-        .pipe(prefixer({
-          browsers: ['last 15 versions'],
-          cascade: false
-        }))
-        .pipe(cssmin())
+// styles build
+gulp.task('style:build', function(){
+      return gulp.src(path.src.style)
+        .pipe(postcss(plugins))
         .pipe(gulp.dest(path.build.css))
         .pipe(reload({stream: true}));
-});
+})
+
+// // sass build task
+// gulp.task('style:build', function () {
+//     gulp.src(path.src.style)
+//         .pipe(sass({
+//             includePaths: ['src/style/'],
+//             outputStyle: 'compressed',
+//             sourceMap: true,
+//             errLogToConsole: true
+//         }))
+//         .pipe(prefixer({
+//           browsers: ['last 15 versions'],
+//           cascade: false
+//         }))
+//         .pipe(cssmin())
+//         .pipe(gulp.dest(path.build.css))
+//         .pipe(reload({stream: true}));
+// });
 
 // image minfy task
 gulp.task('image:build', function () {
