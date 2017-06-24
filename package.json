@@ -6,7 +6,8 @@
     "type": "git",
     "url": " "
   },
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "browser-sync": "*",
     "gulp": "*",
     "gulp-postcss": "*",
@@ -17,9 +18,7 @@
     "gulp-uglify": "*",
     "gulp-watch": "*",
     "imagemin-pngquant": "*",
-    "rimraf": "*"
-  },
-  "devDependencies": {
+    "rimraf": "*",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^15.0.1",
     "eslint-plugin-html": "^3.0.0",
@@ -27,7 +26,6 @@
     "eslint-plugin-jsx-a11y": "^5.0.1",
     "eslint-plugin-markdown": "^1.0.0-beta.6",
     "eslint-plugin-react": "^7.1.0",
-    "gulp-postcss": "^6.3.0",
     "gulp-svgmin": "*",
     "gulp-svgstore": "*",
     "path": "*",

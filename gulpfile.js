@@ -18,7 +18,11 @@ var gulp = require('gulp'),
 // array of postcss plugins
 var plugins = [
   require('postcss-easy-import'),
-  require('postcss-cssnext')(),
+  require('postcss-cssnext')({
+    features: {
+      autoprefixer: false
+    }
+  }),
   require ('cssnano')()
 ];
 

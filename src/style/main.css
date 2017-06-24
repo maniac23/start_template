@@ -1,4 +1,3 @@
-/*import all components & third party style parts here*/
+/* import all components & third party style parts here */
 @import "./normalize.css";
 @import "./variables.css";
-@import "./mixins.css";
